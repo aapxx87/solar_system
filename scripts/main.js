@@ -1,6 +1,6 @@
 const planets = document.querySelectorAll('.orbiting-circle');
 
-const orbitRadius = [50, 65, 80, 95, 120, 125, 140, 155];
+const orbitRadius = [50, 65, 80, 95, 120, 145, 170, 190];
 
 const speed = [0.01, 0.0075, 0.00625, 0.005, 0.00375, 0.0025, 0.002, 0.0015];
 
