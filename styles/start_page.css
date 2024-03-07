@@ -6,9 +6,9 @@
 
 .center-circle {
   position: absolute;
-  width: 65px;
+  width: 68px;
   /* Больше для Солнца */
-  height: 65px;
+  height: 68px;
   border-radius: 50%;
   background-color: transparent;
   /* Жёлтый цвет для Солнца */
@@ -28,8 +28,8 @@
 }
 
 .mercury {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background-image: url('../images/Planets/mercury.png');
   background-size: cover;
   background-position: center;
