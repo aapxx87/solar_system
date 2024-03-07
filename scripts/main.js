@@ -20,3 +20,12 @@ function animate() {
 }
 
 animate();
+
+
+
+
+
+
+btn_learn_more.addEventListener('click', function () {
+
+})

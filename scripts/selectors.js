@@ -1,0 +1,1 @@
+const btn_learn_more = document.querySelector('.more_info_box')
