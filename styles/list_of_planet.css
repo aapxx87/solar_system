@@ -105,11 +105,11 @@
 }
 
 .planet_list_img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  width: auto;
+  width: 100%;
   height: auto;
+  /* Для сохранения пропорций изображения */
+  object-fit: contain;
+  /* Чтобы изображение покрывало всю доступную область */
 }
 
 .planet_list_info {
