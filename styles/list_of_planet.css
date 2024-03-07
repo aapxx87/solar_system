@@ -8,7 +8,19 @@
   align-items: center;
   color: gray;
   font-weight: 400;
-  display: none;
+  /* display: none; */
+}
+
+.more_info_box_planet_list {
+  /* position: absolute;
+  bottom: 60px; */
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-weight: 400;
+  /* display: none; */
 }
 
 .tap_circle {
@@ -58,6 +70,8 @@
   height: 100%;
   background-color: #000;
   position: relative;
+  padding-bottom: 60px;
+  display: none;
 }
 
 .sun-box {
@@ -71,13 +85,14 @@
 }
 
 .planet_list_box {
-  margin-top: 200px;
+  margin-top: 300px;
+  margin-bottom: 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
   color: #fff;
-  gap: 10px;
-  /* overflow-y: scroll; */
+  gap: 30px;
+  padding-bottom: 60px;
 }
 
 .planet_item {

@@ -27,5 +27,16 @@ animate();
 
 
 btn_learn_more.addEventListener('click', function () {
+  container_solar_system.style.display = 'none'
+  btn_learn_more.style.display = 'none'
 
+  container_planet_list.style.display = 'block'
+})
+
+
+btn_go_back.addEventListener('click', function () {
+  container_solar_system.style.display = 'block'
+  btn_learn_more.style.display = 'flex'
+
+  container_planet_list.style.display = 'none'
 })
