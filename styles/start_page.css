@@ -1,0 +1,180 @@
+.orbit-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.center-circle {
+  position: absolute;
+  width: 65px;
+  /* Больше для Солнца */
+  height: 65px;
+  border-radius: 50%;
+  background-color: transparent;
+  /* Жёлтый цвет для Солнца */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-image: url('../images/Planets/sun.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.orbiting-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #e74c3c;
+}
+
+.mercury {
+  width: 6px;
+  height: 6px;
+  background-image: url('../images/Planets/mercury.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Меркурий */
+.venus {
+  width: 12px;
+  height: 12px;
+  /* background-color: #f39c12; */
+  background-image: url('../images/Planets/venus.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Венера */
+.earth {
+  width: 13px;
+  height: 13px;
+  background-color: #3498db;
+  background-image: url('../images/Planets/earth.png');
+  background-size: cover;
+  background-position: center;
+  /* Центрирование изображения */
+}
+
+/* Земля */
+.mars {
+  width: 10px;
+  height: 10px;
+  background-image: url('../images/Planets/mars.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Марс */
+.jupiter {
+  width: 26px;
+  height: 26px;
+  background-image: url('../images/Planets/jupiter.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Юпитер */
+.saturn {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  background-image: url('../images/Planets/saturn.png');
+  background-size: contain;
+  background-position: center;
+}
+
+/* Сатурн */
+.uranus {
+  width: 18px;
+  height: 18px;
+  background-image: url('../images/Planets/uranus.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.neptune {
+  width: 18px;
+  height: 18px;
+  background-image: url('../images/Planets/neptune.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.orbit-path {
+  position: absolute;
+  border-radius: 50%;
+  border: .5px solid #3f3f3f;
+  /* Увеличиваем толщину и делаем линии более заметными */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  /* Убедимся, что орбиты находятся под планетами */
+}
+
+.mercury-path {
+  width: 100px;
+  height: 100px;
+  border-color: #878b8d;
+}
+
+.venus-path {
+  width: 130px;
+  height: 130px;
+  border-color: #be7b0e;
+  border-style: dashed;
+}
+
+.earth-path {
+  width: 160px;
+  height: 160px;
+  border-color: #256a98;
+}
+
+.mars-path {
+  width: 190px;
+  height: 190px;
+  border-color: #af3b2e;
+  border-style: dashed;
+}
+
+.jupiter-path {
+  width: 235px;
+  height: 235px;
+  border-color: #a65a18;
+}
+
+.saturn-path {
+  width: 290px;
+  height: 290px;
+  border-color: #997c09;
+  border-style: dashed;
+}
+
+.uranus-path {
+  width: 340px;
+  height: 340px;
+  border-color: #6b7677;
+}
+
+.neptune-path {
+  width: 380px;
+  height: 380px;
+  border-color: #236795;
+  border-style: dashed;
+}
+
+.orbiting-circle::after {
+  content: attr(data-planet);
+  position: absolute;
+  color: #fff;
+  font-size: 10px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  top: 100%;
+  left: 50%;
+}
