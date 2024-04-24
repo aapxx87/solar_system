@@ -1,42 +1,84 @@
-const planets = document.querySelectorAll('.orbiting-circle');
+const planets_img_adresses = ['images/Planets/mercury.png', 'images/Planets/venus.png', 'images/Planets/earth.png', 'images/Planets/mars.png', 'images/Planets/jupiter.png', 'images/Planets/saturn.png', 'images/Planets/uranus.png', 'images/Planets/neptune.png']
 
-const orbitRadius = [50, 65, 80, 95, 120, 145, 170, 190];
 
-const speed = [0.01, 0.0075, 0.00625, 0.005, 0.00375, 0.0025, 0.002, 0.0015];
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1)); // случайный индекс от 0 до i
+    [array[i], array[j]] = [array[j], array[i]]; // обмен элементами местами
+  }
+  return array;
+}
 
-const center = { x: 200, y: 200 };
 
-function animate() {
 
-  planets.forEach((planet, index) => {
-    const angle = speed[index] * Date.now() / 100;
-    const x = center.x + orbitRadius[index] * Math.cos(angle) - planet.offsetWidth / 2;
-    const y = center.y + orbitRadius[index] * Math.sin(angle) - planet.offsetHeight / 2;
-    planet.style.transform = `translate(${x}px, ${y}px)`;
-  });
+const create_html_sanbox_list = function () {
 
-  requestAnimationFrame(animate);
+
+  shuffleArray(planets_img_adresses).forEach(function (url, idx) {
+
+    const html = `
+    <div class="planet-item_sandbox">
+
+      <div class="planet_sandbox_img">
+        <img class="planet_list_img planet_list_img_sandbox" src="${url}" alt="">
+      </div>
+
+      <div class="planet_sandbox_target_place">
+        <div class="place_for_planet" id="${idx}"></div>
+      </div>
+
+    </div>
+    `
+
+    sandbox_planet_list.insertAdjacentHTML("afterbegin", html)
+
+  })
 
 }
 
-animate();
+
+create_html_sanbox_list()
+
+
+const planets_imgs = document.querySelectorAll('.planet_list_img_sandbox')
+const place_for_planets = document.querySelectorAll('.place_for_planet')
+
+let img
+let planet_place
+
+
+const find_clicked_img = function () {
+
+  planets_imgs.forEach(function (item) {
+    item.addEventListener('click', function () {
+      let img = item.src
+      console.log(img);
+    })
+  })
+
+
+
+}
+
+find_clicked_img()
+
+
+
+const find_planet_place = function () {
+
+  place_for_planets.forEach(function (item) {
+    item.addEventListener('click', function () {
+      let planet_place = item.id
+      console.log(planet_place);
+    })
+  })
+
+
+}
+
+
+find_planet_place()
 
 
 
 
-
-
-btn_learn_more.addEventListener('click', function () {
-  container_solar_system.style.display = 'none'
-  btn_learn_more.style.display = 'none'
-
-  container_planet_list.style.display = 'block'
-})
-
-
-btn_go_back.addEventListener('click', function () {
-  container_solar_system.style.display = 'block'
-  btn_learn_more.style.display = 'flex'
-
-  container_planet_list.style.display = 'none'
-})

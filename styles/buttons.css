@@ -1,0 +1,76 @@
+/* ? BTN - TAP TO LEARN MORE */
+
+.more_info_box {
+  position: absolute;
+  bottom: 60px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: gray;
+  font-weight: 400;
+}
+
+.more_info_box_planet_list {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-weight: 400;
+}
+
+.more_info_box_planet_list_sandbox {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-weight: 400;
+}
+
+
+.from_sandbox_to_planet_list {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-weight: 400;
+}
+
+.tap_circle {
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  position: relative;
+  animation: scaleAnimation 5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.tap_circle::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@keyframes scaleAnimation {
+
+  0%,
+  100% {
+    transform: scale(1);
+    /* Начальное и конечное состояние - оригинальный размер */
+  }
+
+  50% {
+    transform: scale(1.2);
+    /* Увеличение размера на 20% */
+  }
+}

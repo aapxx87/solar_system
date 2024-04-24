@@ -9,51 +9,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="manifest" href="manifest.json">
-  <title>Solar system v.2.0.</title>
+  <title>Solar system v.2.1.</title>
 </head>
 
 <body>
 
 
-  <!-- ? STARTER PLANETS AND ORBITS -->
+  <!-- ? PLANETS AND ORBITS CONTAINER -->
 
-  <div class="orbit-container">
 
-    <!-- Солнце -->
-    <div class="center-circle"></div>
+  <div class="planet-and-orbit-container">
 
-    <!-- Орбиты планет -->
-    <div class="orbit-path mercury-path"></div>
-    <div class="orbit-path venus-path"></div>
-    <div class="orbit-path earth-path"></div>
-    <div class="orbit-path mars-path"></div>
-    <div class="orbit-path jupiter-path"></div>
-    <div class="orbit-path saturn-path"></div>
-    <div class="orbit-path uranus-path"></div>
-    <div class="orbit-path neptune-path"></div>
+    <div class="orbit-container">
 
-    <!-- Планеты -->
-    <div class="orbiting-circle mercury" data-planet="Mercury"></div>
-    <div class="orbiting-circle venus" data-planet="Venus"></div>
-    <div class="orbiting-circle earth" data-planet="Earth"></div>
-    <div class="orbiting-circle mars" data-planet="Mars"></div>
-    <div class="orbiting-circle jupiter" data-planet="Jupiter"></div>
-    <div class="orbiting-circle saturn" data-planet="Saturn"></div>
-    <div class="orbiting-circle uranus" data-planet="Uranus"></div>
-    <div class="orbiting-circle neptune" data-planet="Neptune"></div>
+      <!-- Солнце -->
+      <div class="center-circle"></div>
+
+      <!-- Орбиты планет -->
+      <div class="orbit-path mercury-path"></div>
+      <div class="orbit-path venus-path"></div>
+      <div class="orbit-path earth-path"></div>
+      <div class="orbit-path mars-path"></div>
+      <div class="orbit-path jupiter-path"></div>
+      <div class="orbit-path saturn-path"></div>
+      <div class="orbit-path uranus-path"></div>
+      <div class="orbit-path neptune-path"></div>
+
+      <!-- Планеты -->
+      <div class="orbiting-circle mercury" data-planet="Mercury"></div>
+      <div class="orbiting-circle venus" data-planet="Venus"></div>
+      <div class="orbiting-circle earth" data-planet="Earth"></div>
+      <div class="orbiting-circle mars" data-planet="Mars"></div>
+      <div class="orbiting-circle jupiter" data-planet="Jupiter"></div>
+      <div class="orbiting-circle saturn" data-planet="Saturn"></div>
+      <div class="orbiting-circle uranus" data-planet="Uranus"></div>
+      <div class="orbiting-circle neptune" data-planet="Neptune"></div>
+
+    </div>
+
+
+    <!-- ? BTN TAP TO LEARN MORE -->
+
+    <div class="more_info_box">
+      <div class="tap_circle"></div>
+      Tap to learn more
+    </div>
+
 
   </div>
-
-
-
-
-  <!-- ? BTN TAP TO LEARN MORE -->
-
-  <div class="more_info_box">
-    <div class="tap_circle"></div>
-    Tap to learn more
-  </div>
-
 
 
 
@@ -143,6 +146,11 @@
         Tap to go back
       </div>
 
+      <div class="more_info_box_planet_list_sandbox">
+        <div class="tap_circle"></div>
+        Go to sandbox
+      </div>
+
     </div>
 
 
@@ -152,8 +160,146 @@
 
 
 
+
+
+  <!-- ? PLANET SANDBOX CONTAINER  -->
+
+  <div class="planet-sandbox-container">
+
+    <div class="sun-box"></div>
+
+    <div class="planet_list_box sandbox_planet_list">
+
+
+      <!-- <div class="planet-item_sandbox">
+
+        <div class="planet_sandbox_img">
+          <img class="planet_list_img planet_list_img_sandbox" src="images/Planets/mercury.png" alt="">
+        </div>
+
+        <div class="planet_sandbox_target_place">
+          <div class="place_for_planet" id="mercury"></div>
+        </div>
+
+      </div>
+
+
+      <div class="planet-item_sandbox">
+
+        <div class="planet_sandbox_img">
+          <img class="planet_list_img" src="images/Planets/venus.png" alt="">
+        </div>
+
+        <div class="planet_sandbox_target_place">
+          <div class="place_for_planet" id="venus"></div>
+        </div>
+
+      </div>
+
+
+      <div class="planet-item_sandbox">
+
+        <div class="planet_sandbox_img">
+          <img class="planet_list_img" src="images/Planets/earth.png" alt="">
+        </div>
+
+        <div class="planet_sandbox_target_place">
+          <div class="place_for_planet" id="earth"></div>
+        </div>
+
+      </div>
+
+
+      <div class="planet-item_sandbox">
+
+        <div class="planet_sandbox_img">
+          <img class="planet_list_img" src="images/Planets/mars.png" alt="">
+        </div>
+
+        <div class="planet_sandbox_target_place">
+          <div class="place_for_planet" id="mars"></div>
+        </div>
+
+      </div>
+
+
+
+      <div class="planet-item_sandbox">
+
+        <div class="planet_sandbox_img">
+          <img class="planet_list_img" src="images/Planets/jupiter.png" alt="">
+        </div>
+
+        <div class="planet_sandbox_target_place">
+          <div class="place_for_planet" id="jupiter"></div>
+        </div>
+
+      </div>
+
+
+      <div class="planet-item_sandbox">
+
+        <div class="planet_sandbox_img">
+          <img class="planet_list_img" src="images/Planets/saturn.png" alt="">
+        </div>
+
+        <div class="planet_sandbox_target_place">
+          <div class="place_for_planet" id="saturn"></div>
+        </div>
+
+      </div>
+
+
+
+      <div class="planet-item_sandbox">
+
+        <div class="planet_sandbox_img">
+          <img class="planet_list_img" src="images/Planets/uranus.png" alt="">
+        </div>
+
+        <div class="planet_sandbox_target_place">
+          <div class="place_for_planet" id="uranus"></div>
+        </div>
+
+      </div>
+
+
+      <div class="planet-item_sandbox">
+
+        <div class="planet_sandbox_img">
+          <img class="planet_list_img" src="images/Planets/neptune.png" alt="">
+        </div>
+
+        <div class="planet_sandbox_target_place">
+          <div class="place_for_planet" id="neptune"></div>
+        </div>
+
+      </div> -->
+
+
+
+      <!-- ? BTN TAP TO LEARN MORE -->
+
+      <div class="from_sandbox_to_planet_list">
+        <div class="tap_circle"></div>
+        Back
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
   <script src="scripts/selectors.js"></script>
   <script src="scripts/main.js"></script>
+
+  <script src="scripts/planet_orbit_movements.js"></script>
+  <script src="scripts/buttons_listeners.js"></script>
 
 
   <script>
