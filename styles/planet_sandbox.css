@@ -22,7 +22,6 @@
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  /* border: 1px solid gray; */
 }
 
 .planet_sandbox_target_place {
@@ -37,6 +36,8 @@
   height: 98px;
   border-radius: 50%;
   background-color: gray;
+  clip-path: inset(0);
+  overflow: visible;
   /* background-image: url('../images/Planets/sun.png');
   background-size: cover;
   background-position: center; */

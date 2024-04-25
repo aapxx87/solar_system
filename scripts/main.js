@@ -12,6 +12,8 @@ function shuffleArray(array) {
 
 
 
+
+// ? Добавляем изображение планеты на место, которое указано правильно для ее размещения
 const add_img_to_right_place = function (arr) {
   document.getElementById(`${arr[1]}`).style.background = `url('${arr[0]}')`
   document.getElementById(`${arr[1]}`).style.backgroundSize = 'cover'
@@ -21,6 +23,8 @@ const add_img_to_right_place = function (arr) {
 
 
 
+
+// ? Удаляем изображение планеты с левой части, когда правильно выбрали место, где она должн анаходиться и она переместилась туда
 const remove_planet_img_from_left_side = function (arr) {
 
   planets_imgs.forEach(function (item) {
@@ -38,6 +42,7 @@ const remove_planet_img_from_left_side = function (arr) {
 }
 
 
+// ? Удаление бордеров выделения со всех мест для определения планеты
 const delete_border_from_place = function () {
   place_for_planets.forEach(function (item) {
     item.classList.remove('border')
@@ -182,8 +187,6 @@ const find_clicked_img = function () {
     })
   })
 
-
-
 }
 
 find_clicked_img()
@@ -191,11 +194,8 @@ find_clicked_img()
 
 
 const highlight_target_place = function (id) {
-
   delete_border_from_place()
-
   document.getElementById(`${id}`).classList.add('border')
-
 }
 
 
