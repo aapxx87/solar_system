@@ -30,7 +30,6 @@
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  /* border: 1px solid gray; */
 }
 
 .place_for_planet {
@@ -38,4 +37,11 @@
   height: 98px;
   border-radius: 50%;
   background-color: gray;
+  /* background-image: url('../images/Planets/sun.png');
+  background-size: cover;
+  background-position: center; */
+}
+
+.border {
+  border: 3px solid rgb(30, 227, 30);
 }
